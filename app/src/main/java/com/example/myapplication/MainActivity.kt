@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
          val decorView=window.decorView
         setContentView(R.layout.activity_main)
+        supportActionBar?.hide()
         val bt1: Button = findViewById(R.id.bt1)//kotlin不用findviewbyid方法,再看viewBlinding
         val bt2: Button = findViewById(R.id.bt2)
         val bt3: Button=findViewById(R.id.bt3)

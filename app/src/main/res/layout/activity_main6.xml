@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity6"
+    android:background="@color/col_1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.myapplication.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+<!--引入title-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请联系我们"
+        android:textSize="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="20dp"
+        android:background="@color/touhei"
+        android:textColor="@color/white">
+
+    </TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textSize="25dp"
+        android:text="邮箱:fishhhhhh@123.com"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="120dp"
+        android:textColor="@color/white"
+        ></TextView>
+         <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:textSize="25dp"
+        android:text="电话：+86123456789"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        ></TextView>
+
+
+
+
+
+</LinearLayout>

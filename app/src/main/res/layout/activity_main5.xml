@@ -5,7 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity5">
+    tools:context=".MainActivity5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.example.myapplication.TitleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+<!--引入title-->
+    </LinearLayout>
 
     <TextView
         android:id="@+id/yubao"

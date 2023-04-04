@@ -52,6 +52,7 @@ class MainActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main4)
+        supportActionBar?.hide()
         val list1 :ListView =findViewById(R.id.list1)
         val  adapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
         list1.adapter=adapter

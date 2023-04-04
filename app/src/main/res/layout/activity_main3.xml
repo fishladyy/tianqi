@@ -5,13 +5,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity3">
-    <Button
-        android:id="@+id/bt4"
+    tools:context=".MainActivity3"
+    android:orientation="vertical"
+    android:background="@color/col_1"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.example.myapplication.TitleLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="But4"
-        android:textSize="40dp" />
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="159dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="设置"
+        android:textColor="@color/white"
+        android:textSize="50dp">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="天气提醒"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            >
+
+        </TextView>
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="开"
+            android:layout_weight="1"
+            android:layout_gravity="center">
+
+        </Button>
+    </LinearLayout>
+
 
 </LinearLayout>
