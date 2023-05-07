@@ -6,7 +6,9 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.LinearLayout
+import com.example.myapplication.databinding.TitleBinding
 
+//导航
 class TitleLayout(context: Context, attrs: AttributeSet) : LinearLayout(context, attrs) {
     init {
         LayoutInflater.from(context).inflate(R.layout.title, this,true)

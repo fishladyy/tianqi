@@ -9,58 +9,35 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.myapplication.databinding.Activity15riBinding
 
 class MainActivity4 : AppCompatActivity() {
-
+private lateinit var binding: Activity15riBinding//viewbinding绑定视图4
     private  val data = listOf("Yesterday","Today","Tomorrow","Monday","Tuesday","Wednesday","Thursday",
-    "Friday","Saturday","Sunday")
-    class Tianqi(val name: String,val imageId:Int)
-    //   定义一个实体类天气
-     private val tianqiList=ArrayList<Tianqi>()
+        "Friday","Saturday","Sunday")
+    private val tianqiList=ArrayList<Tianqi>()
     //创建天气列表
-    //Tianqi是类，TianqiAdapter是下面写的另一个类，tianqiList是装天气的列表
-    class TianqiAdapter(activity:MainActivity4,val resourceID :Int,data:List<Tianqi>):
-
-        ArrayAdapter<Tianqi>(activity,resourceID,data){
-
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-
-            val view :View
-            if (convertView==null){
-                view=LayoutInflater.from(context).inflate(resourceID,parent,false)
-            }
-            else{
-                view=convertView
-            }
-            //在getview（）方法中进行了判断：如果convertview为null，则用
-            //LayoutInflater去加载布局；如果不为null，则可以对convertview进行重用，能提高ListView的运行效率
-            //在快速滚动的时候可以表现出更好的性能
-            val tianqiImage:ImageView=view.findViewById(R.id.tianqiImage)
-            val tianqiName:TextView=view.findViewById(R.id.tianqiName)
-            val tianqi =getItem(position)
-            //获取当前项的Tianqi实例
-            if (tianqi!=null)
-            {
-                tianqiImage.setImageResource(tianqi.imageId)
-                tianqiName.text=tianqi.name
-            }
-
-            return view
-        }
-
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main4)
-        supportActionBar?.hide()
-        val list1 :ListView =findViewById(R.id.list1)
-        val  adapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
-        list1.adapter=adapter
-       //用ArrAdapter适配器把data中的数据传入list1中
-        initTianqis()
-        val adapter2=TianqiAdapter(this,R.layout.tianqi_item,tianqiList)
-        list1.adapter=adapter2
+        binding= Activity15riBinding.inflate(layoutInflater)
+        val view=binding.root
+        setContentView(view)
 
+        initTianqis()
+        val layoutManager=LinearLayoutManager(this)
+
+        binding.list1.layoutManager=layoutManager
+        val adapter_tianqi=TianqiAdapter(tianqiList)
+        binding.list1.adapter=adapter_tianqi
+
+//        val list1 :ListView =findViewById(R.id.list1)
+//        val  adapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,data)
+//        list1.adapter=adapter
+//       //用ArrayAdapter适配器把data中的数据传入list1中
+//        initTianqis()
+//        val adapter2=TianqiAdapter(this,R.layout.tianqi_item,tianqiList)
+//        list1.adapter=adapter2
 
 
     }
@@ -80,4 +57,6 @@ class MainActivity4 : AppCompatActivity() {
         }
 
     }
+
+
 }
