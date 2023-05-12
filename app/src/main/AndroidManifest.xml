@@ -14,16 +14,16 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity6"
+            android:name=".MainActivityFankui6"
             android:exported="false" />
         <activity
-            android:name=".MainActivity5"
+            android:name=".MainActivityLianwang5"
             android:exported="false" />
         <activity
-            android:name=".MainActivity4"
+            android:name=".MainActivityDailyweather4"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".MainActivitySetting3"
             android:exported="false">
 
             <!-- <intent-filter tools:ignore="AppLinkUrlError"> -->
@@ -36,10 +36,10 @@
             -->
         </activity>
         <activity
-            android:name=".MainActivitysousuo2"
+            android:name=".MainActivitySousuo2"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".MainActivityZhuye"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

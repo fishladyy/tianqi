@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.place
+package com.example.myapplication.ui.place1
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,10 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.PlaceViewModel
 import com.example.myapplication.databinding.FragmentPlaceBinding
-
 
 
 class PlaceFragment : Fragment() {

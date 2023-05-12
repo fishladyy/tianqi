@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/yue"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivityZhuye">
 
     <Button
         android:id="@+id/bt1"
@@ -24,12 +24,12 @@
     <!--    bt1到ac2-->
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/placeName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
-        android:text="城市"
+        android:text="上海市"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintEnd_toStartOf="@+id/bt2"
@@ -62,7 +62,7 @@
     <!--    没有文字会显示报错直接ignore-->
 
     <TextView
-        android:id="@+id/Temp"
+        android:id="@+id/currentTemp"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:gravity="center_horizontal"
@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@id/yunyun" />
 
     <TextView
-        android:id="@+id/Wearther"
+        android:id="@+id/currentSky"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -85,11 +85,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Temp" />
+        app:layout_constraintTop_toBottomOf="@id/currentTemp" />
 
 
     <TextView
-        android:id="@+id/kongqi"
+        android:id="@+id/currentAQI"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:gravity="center"
@@ -99,18 +99,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/Wearther" />
+        app:layout_constraintTop_toBottomOf="@id/currentSky" />
 
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
         android:layout_width="match_parent"
         android:layout_height="237dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
         android:background="@color/touhei"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <RelativeLayout
@@ -118,50 +119,13 @@
             android:layout_height="match_parent"
             android:background="@color/touhei"
             android:orientation="vertical">
-
-
-            <ImageView
-                android:layout_marginVertical="5dp"
-                android:id="@+id/xiaotubiao"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="0dp"
-                android:src="@drawable/tianqi" />
-
-            <TextView
-                android:id="@+id/xiaotianqi"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="98dp"
-                android:layout_marginLeft="39dp"
-                android:layout_marginTop="0dp"
-                android:layout_toRightOf="@id/xiaotubiao"
-                android:gravity="center_vertical"
-                android:text="今天 阴转小雨"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="1dp"
-                android:gravity="center"
-                android:text="17℃/13℃"
-                android:textColor="@color/white"
-                android:textSize="20dp" />
-
+            <LinearLayout
+                android:id="@+id/dailyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+            </LinearLayout>
 
             <Button
                 android:id="@+id/bt3"

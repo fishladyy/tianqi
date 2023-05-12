@@ -1,11 +1,15 @@
-package com.example.myapplication.ui.place
+package com.example.myapplication.ui.place1
 
+import android.app.Activity
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.MainActivityDailyweather4
+import com.example.myapplication.MainActivityZhuye
 import com.example.myapplication.R
 import com.example.myapplication.logic.model.Place
 
@@ -19,7 +23,19 @@ class PlaceAdapter(private val fragment: Fragment, private val placeList: List<P
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.place_item,
             parent, false)
-        return ViewHolder(view)
+        val holder=ViewHolder(view)
+        holder.itemView.setOnClickListener{
+            val position=holder.absoluteAdapterPosition
+            val place=placeList[position]
+            val intent=Intent(parent.context,MainActivityZhuye::class.java).apply {
+                putExtra("location_lng",place.location.lng)
+                putExtra("location_lat",place.location.lat)
+                putExtra("place_name",place.name)
+            }
+            fragment.startActivity(intent)
+            fragment.activity?.finish()
+        }
+        return holder
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val place = placeList[position]

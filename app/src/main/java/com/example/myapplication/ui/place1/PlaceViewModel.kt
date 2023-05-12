@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.ui.place1
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations

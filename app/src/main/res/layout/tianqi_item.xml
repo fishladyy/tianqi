@@ -3,22 +3,32 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+    android:layout_height="wrap_content">
 
-<ImageView
-    android:id="@+id/tianqiImage"
-    android:layout_width="40dp"
-    android:layout_height="40dp"
-    android:layout_gravity="center_vertical"
-    android:layout_marginLeft="20dp"/>
     <TextView
-        android:id="@+id/tianqiName"
+        android:id="@+id/dailydateInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></TextView>
+
+    <ImageView
+        android:id="@+id/dailySkyIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/dailySkyInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="40dp"
-        android:textColor="@color/white"
-        />
+        android:textColor="@color/white" />
 
+    <TextView
+        android:id="@+id/dailytemperatureInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"></TextView>
 </LinearLayout>
