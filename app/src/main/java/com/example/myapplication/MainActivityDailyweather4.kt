@@ -49,7 +49,7 @@ class MainActivityDailyweather4 : AppCompatActivity() {
         val daily=weather.daily
         val forecastLayout = findViewById<LinearLayout>(R.id.forecastLayout)
         forecastLayout.removeAllViews()
-        for (i in 0 until 15) {
+        for (i in 0 until daily.skycon.size) {
             val skycon = daily.skycon[i]
             val view = LayoutInflater.from(this).inflate(R.layout.daily, forecastLayout, false)
             val SkyIcon = view.findViewById<ImageView>(R.id.SkyIcon)
